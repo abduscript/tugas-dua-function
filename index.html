@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitung Luas Persegi</title>
+</head>
+<style>
+    body{
+        background: #8390b1;
+    }
+    .body {
+        position: absolute;
+        display: block;
+        align-items: center;
+    }
+    button {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+    }
+    .persegi {
+        width: 150px;
+        height: 150px;
+        margin-top: 2rem;
+        border: 3px dotted black;
+        align-items: center;
+    }
+</style>
+<body>
+    <div class="input">
+        <input type="number" id="count" placeholder="ukuran sisi persegi">
+        <label for="count"></label>
+        <button onclick="hitungLuasPersegi()"></button>
+    </div>
+    <div class="body">
+        <div class="persegi"></div>
+        <p>luas persegi adalah <span id="luasPersegi"></span>m²</p>
+    </div>
+<script>
+    function hitungLuasPersegi(){
+        let luasPersegi = document.getElementById('count').value;
+        let total = luasPersegi * luasPersegi;        
+        document.getElementById('luasPersegi').innerText = total;
+        return total;
+    }
+</script>
+</body>
+</html>
